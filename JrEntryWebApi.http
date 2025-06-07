@@ -1,0 +1,6 @@
+@JrEntryWebApi_HostAddress = http://localhost:5215
+
+GET {{JrEntryWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
