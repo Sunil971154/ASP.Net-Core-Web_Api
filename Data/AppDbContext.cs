@@ -20,7 +20,9 @@ namespace JerEntryWebApp.Data
 
         }
 
-        //DB me Table banegi JournalEntries name se 
+        /* DB me Table banegi JournalEntries name se
+         * 👉 यह property आपके DbContext में एक table की तरह काम करेगी, जिसका नाम है JournalEntries
+           👉 और हर row का type है JournalEntry*/
         public DbSet<JournalEntry> JournalEntries { get; set; }
 
 

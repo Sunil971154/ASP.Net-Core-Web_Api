@@ -1,7 +1,7 @@
 ## Build results
 bin/
 obj/
-
+Diff-Files/
 ## User-specific files
 *.user
 *.suo
