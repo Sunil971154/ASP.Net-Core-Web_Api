@@ -1,5 +1,6 @@
 
 using JerEntryWebApp.Data;
+using JrEntryWebApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace JrEntryWebApi
@@ -16,7 +17,11 @@ namespace JrEntryWebApi
             builder.Services.AddDbContext<AppDbContext>(options =>
                     options.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));// yaha bus register hua hai , connection string app setting me bana lo , 
 
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IJEService, JournalEntryService>();
+
             builder.Services.AddControllers();
+           
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 

@@ -5,9 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JerEntryWebApp.Controllers
 {
-    [ApiController]    // यह attribute बताता है कि यह class एक API controller है।  
-    [Route("journal")] // यह route prefix है, जिसका मतलब है कि इस controller के सभी action methods की URL में "journal" शामिल होगा।
-    public class JournalEntryController : ControllerBase /* Object → ControllerBase( support nahi karta- Views, Razor pages, or UI rendering.)
+    //[ApiController]    // यह attribute बताता है कि यह class एक API controller है।  
+   // [Route("journal")] // यह route prefix है, जिसका मतलब है कि इस controller के सभी action methods की URL में "journal" शामिल होगा।
+    [NonController]
+    public class JournalEntryController2 : ControllerBase /* Object → ControllerBase( support nahi karta- Views, Razor pages, or UI rendering.)
                                                           * ControllerBase→Controller(support karta hai-Views, Razor pages, or UI rendering.) -> ApiController
                                                           */
     {
@@ -19,7 +20,7 @@ namespace JerEntryWebApp.Controllers
          * Dependency Injection के ज़रिए AppDbContext instance को _context में assign किया गया है , यहाँ AppDbContext एक Entity Framework Core का database context है
          * जिससे database से data access किया जा सके controller के methods में  
          */
-        public JournalEntryController(AppDbContext context)
+        public JournalEntryController2(AppDbContext context)
         {
             
             _context = context;
